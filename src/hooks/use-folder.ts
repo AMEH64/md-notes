@@ -23,7 +23,11 @@ export function useFolder() {
 
   // Check if File System Access API is supported (client-side only)
   useEffect(() => {
-    setIsSupported('showDirectoryPicker' in window)
+    const supported = 'showDirectoryPicker' in window
+    console.log('File System Access API supported:', supported)
+    console.log('Secure context:', window.isSecureContext)
+    console.log('User agent:', navigator.userAgent)
+    setIsSupported(supported)
   }, [])
 
   // Recursively load files from directory

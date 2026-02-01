@@ -377,7 +377,7 @@ export default function Home() {
           </Button>
           {!isSupported && (
             <p className="text-sm text-destructive mt-4">
-              Requires Chrome or Edge browser
+              Requires Chrome, Edge, or Brave on desktop (check console for details)
             </p>
           )}
         </div>
